@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+
+body{
+    background-color:  #f1f2f7;
+}
+
+header{
+   display: flex;
+   justify-content: center;
+    
+}
+
+.contenair-header{
+ width: 100%;
+ height: 120px;
+ display: flex;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background-color: #f1f2f7;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.contenair-main{
+    width: 70%;
+    height: 70vh;
+    overflow-x: scroll;
+    background-color:  #f1f2f7;
+    
+}
+
+.sidebar{
+    width: 150px;
+    height: 90vh;
+    background-color: #ffffff;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+}
+
+.contenair-sidebarr{
+    width: 100px;
+    height: 400px;
+    
+    
+}
+
+.delete-case{
+    width: 300px;
+    height: 400px;
+    color: rgb(31, 30, 30);
+    background-color: rgba(177, 173, 173, 0.917);
+    position: absolute;
+    padding: 2%;
+    right: 0;
+
+}
+
+.deletebtn{
+    margin-top: 5%;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.deletebtn p {
+    display: flex;
+    justify-content: center;
+}
+#valider{
+    background-color: #2982ea;
+    
+}
+
+#nonvalider{
+    background-color: red;
+}
+
+.delete-choice{
+    width: 50%;
+
+}
+
+.other-software{
+    width: 100%;
+    position: absolute;
+    height: 120px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.contenair-software{
+    width: 90%;
+    height: 100px;
+   
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    color: rgb(32, 31, 31);
+}
+
+.cell-software {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+
+.cell-software img {
+    border-radius: 5px;
+}
+
+.cell-software p {
+    font-size: 8px;
+}
+
+.cell-software:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* icons */
+
+.sizeIcon{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    cursor: pointer;
+    
+ 
+}
+
+
+
+.sizeIcon p{
+    width: 70%;
+    margin-left: 10%;
+    
+}
+
+/*search bar*/
+.search-bar{
+    display: flex;
+    background-color: #f1f2f7;
+}
+.searchicon{
+    background-color: #f1f2f7 ;
+    border: none;
+    width: 50px;
+}
+.search-bar input{
+    width: 500px;
+    height: 40px;
+}
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.507);
+  }
+  .searchicon {
+    color: #363636; /* Couleur de l'icône */
+
+  }
+
+  /*grid*/
+
+  .grid-prop {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
+    gap: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.cell {
+    width: 100%; 
+    height: 255px;
+    border: 1px solid rgb(168, 164, 164);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    color: rgb(18, 17, 17);
+    font-size: 20px;
+    border-radius: 5px; 
+    padding: 0;
+    cursor: pointer;
+}
+
+.cell-delete{
+    
+    background-color: white;
+    color: black;
+}
+
+
+
+.info-cell{
+    width: 100%;
+    padding: 2%;
+}
+
+.localisation p{
+    font-size:25px ;
+    
+}
+
+.tag-localisation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+
+
