@@ -16,7 +16,7 @@ header{
 
 .contenair-header{
  width: 100%;
- height: 120px;
+ height: 150px;
  display: flex;
  display: flex;
  justify-content: center;
@@ -40,9 +40,8 @@ main{
 
 .sidebar{
     width: 150px;
-    height: 90vh;
+    height: 100vh;
     background-color: #ffffff;
-    
     position: absolute;
     left: 0;
     top: 0;
@@ -64,11 +63,17 @@ main{
     width: 300px;
     height: 400px;
     color: rgb(31, 30, 30);
-    background-color: rgba(177, 173, 173, 0.917);
+    background-color: rgba(253, 249, 249, 0.917);
     position: absolute;
     padding: 2%;
     right: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
 
+}
+
+.hidden{
+    display: none;
 }
 
 .deletebtn{
@@ -87,12 +92,16 @@ main{
     justify-content: center;
 }
 #valider{
-    background-color: #2982ea;
+    background-color: #fcfdfd;
+    border: 1px solid rgba(128, 128, 128, 0.478);
+    border-radius: 5px;
     
 }
 
 #nonvalider{
-    background-color: red;
+    border-radius: 5px;
+    background-color: #fcfdfd;
+    border: 1px solid rgba(128, 128, 128, 0.478);
 }
 
 .delete-choice{
@@ -207,7 +216,7 @@ main{
 .cell {
     width: 100%; 
     height: 255px;
-    border: 1px solid rgb(168, 164, 164);
+    
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -217,6 +226,8 @@ main{
     border-radius: 5px; 
     padding: 0;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
 }
 
 .cell-delete{
