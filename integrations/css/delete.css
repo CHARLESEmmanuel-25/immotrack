@@ -9,7 +9,7 @@
   }
 
 body{
-    background-color:  #f1f2f7;
+    background-color:  white;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
     justify-content: center;
     flex-direction: column; 
     position: relative; 
-    background-color:  #f1f2f7;
+    background-color:  white;
 }
 
 .contact {
@@ -25,11 +25,14 @@ header {
     top: 0; 
     width: 100%;
     height: 50px;
-    background-color: orange;
+    background-color: #fe6702b2; 
+    backdrop-filter: blur(10px); 
     z-index: 10000; 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between; 
+    padding: 0 20px; 
+    color: white;
 }
 
 .contenair-header {
@@ -40,7 +43,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #f1f2f7;
+    background-color:  white;
 }
 
 .search-section {
@@ -63,10 +66,7 @@ header {
     font-family: 'Arial', sans-serif;
 }
 
-.userphoto{
-    width: 40px;
-    background-color: black;
-}
+
 .search-bar {
     display: flex;
     width: 100%;
@@ -75,7 +75,7 @@ header {
     border-radius: 30px;
     overflow: hidden;
    
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 
@@ -124,8 +124,7 @@ main{
     width: 70%;
     height: 70vh;
     overflow-x: scroll;
-    background-color:  #f1f2f7;
-    
+    background-color:  white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,6 +132,35 @@ main{
     
 }
 
+
+.contenair-user{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-left: 4%;
+    
+}
+
+.contenair-user p{
+    color: black;
+}
+
+
+.userphoto{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #15294A;
+    cursor: pointer;
+}
+
+.userphoto img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 
 .sidebar{
     width: 150px;
@@ -158,7 +186,7 @@ main{
     margin-top: 12rem;
     display: flex;
     justify-content: center;
-   border-bottom:1px solid rgba(255, 255, 255, 0.223) ;
+    border-bottom:1px solid rgba(255, 255, 255, 0.223) ;
     
    
     
@@ -198,11 +226,20 @@ main{
 }
 
 .logo{
-    width: 30px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-right: 80%;
+    width: 50px;
+    padding: 4px;
+    margin-right: 50%;
+    margin-left: 2%;
     
+}
+
+.contact-icon{
+    width: 100px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    color: black;
 }
 
 .logo img{
@@ -265,12 +302,12 @@ main{
 }
 
 .contenair-otherSoftware ul li img{
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .delete-case{
     width: 300px;
-    height: 400px;
+    height: 500px;
     color: rgb(31, 30, 30);
     background-color: rgba(253, 249, 249, 0.917);
     position: absolute;
@@ -396,14 +433,7 @@ main{
     border-radius: 5px; 
     padding: 0;
     cursor: pointer;
-    box-shadow:
-    0.1px 0px 2.2px rgba(0, 0, 0, 0.02),
-    0.3px 0px 5.3px rgba(0, 0, 0, 0.028),
-    0.6px 0px 10px rgba(0, 0, 0, 0.035),
-    1.1px 0px 17.9px rgba(0, 0, 0, 0.042),
-    2.1px 0px 33.4px rgba(0, 0, 0, 0.05),
-    5px 0px 80px rgba(0, 0, 0, 0.07)
-  ;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-color: white;
 }
 
@@ -482,6 +512,14 @@ main{
 .attribut{
     color: #FF6700;
 }
+
+.close{
+    width: 100%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: end;
+}
+
 
 
 
