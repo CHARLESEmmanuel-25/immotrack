@@ -25,14 +25,14 @@ header {
     top: 0; 
     width: 100%;
     height: 50px;
-    background-color: #fe6702b2; 
+    background-color: #16284ac4; 
     backdrop-filter: blur(10px); 
     z-index: 10000; 
     display: flex;
     align-items: center;
     justify-content: space-between; 
     padding: 0 20px; 
-    color: white;
+   
 }
 
 .contenair-header {
@@ -87,6 +87,8 @@ header {
     outline: none; 
     color: #555;
 }
+
+
 
 
 .search-bar input::placeholder {
@@ -309,11 +311,11 @@ main{
     width: 300px;
     height: 500px;
     color: rgb(31, 30, 30);
-    background-color: rgba(253, 249, 249, 0.917);
+    background-color: rgba(253, 249, 249, 0.979);
     position: absolute;
     padding: 2%;
     right: 0;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px;
 
 }
@@ -520,6 +522,251 @@ main{
     justify-content: end;
 }
 
+.filtre{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 2%;
+    color: gray;
+}
 
 
+
+
+
+/*details page*/
+
+.contenair-mainDetails{
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.title-info strong{
+    color: #15294A ;
+}
+
+
+
+.contenair-details{
+    width: 100%;
+    background-color: black;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenair-details{
+    width: 90%;
+    height: 100%;
+    background-color: rgb(249, 249, 248);
+    margin-left: 10%;
+    padding-left: 2%;
+    display: flex;
+  
+    justify-content: center;
+    overflow-x: scroll;
+    
+}
+
+.infobox{
+    width: 98%;
+    height: 400px;
+    display: flex;
+    padding: 2%;
+    gap: 2%;
+    background-color: rgb(244, 245, 241);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 10%;
+   
+}
+
+.infobox img{
+    border-radius: 5%;
+}
+
+.galery{
+    width: 50%;
+    height: 400px;
+}
+
+.media{
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.media img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.description{
+    width: 50%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.207);
+    border-radius: 5px;
+    color: gray;
+    padding: 2%;
+}
+
+.statistiques-prix {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+    gap: 20%;
+    color: gray;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-template-rows: repeat(2, auto);  /* 2 lignes */
+    gap: 2px; 
+    width: 100%; 
+    justify-content: space-between;
+}
+
+.medianprice {
+   
+   display: flex;
+   justify-content: start;
+   flex-direction: column;
+   margin-top: 1%;
+   
+   color: gray;
+
+   
+}
+
+.medianprice p{
+    margin-top: 5%;
+}
+
+.tag-prop{
+    .tag-prop {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        padding: 2%;
+
+        
+    }
+    
+    .adressetag {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%; 
+        padding: 2%;
+        color: gray;
+        margin-top: 2%;
+        border-top: 1px solid gray;
+        
+    }
+
+    #adresseta{
+        border: none;
+    }
+    
+    .adressetag .tag {
+        font-weight: bold;
+        color: #7C1AF0;
+    }
+    
+    .adressetag .location,
+    .adressetag .type {
+        color: #555;
+        font-size: 0.9em;
+    }
+    
+    .icon-location {
+        margin-right: 5px;
+    }
+    
+    .fas {
+        margin-right: 2px;
+    }
+    
+}
+
+.infoagent{
+    width: 98%;
+    height: 400px;
+    
+    display: flex;
+    gap: 2%;
+}
+
+.box-agent{
+    padding: 2%;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/*galery*/
+
+.gallery-item {
+    width: 100px; /* Ajustez selon vos besoins */
+    margin: 5px;
+}
+
+
+.gallery{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pagination {
+    width: auto; 
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 5px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #f9f6f6; 
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff6f3c; 
+}
 
