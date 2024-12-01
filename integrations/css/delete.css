@@ -770,3 +770,16 @@ main{
     background-color: #ff6f3c; 
 }
 
+.boxPrev-next{
+    position: absolute;
+    width: 95%;
+    height: 20px;
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxPrev-next i{
+    cursor: pointer;
+}
