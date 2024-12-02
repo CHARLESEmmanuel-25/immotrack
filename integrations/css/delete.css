@@ -1035,3 +1035,7 @@ form button:hover {
     color: #aaa;
     font-size: 14px;
 }
+
+.marqueur{
+    width: 200px;
+}
