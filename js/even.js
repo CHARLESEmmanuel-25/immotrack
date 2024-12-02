@@ -1,4 +1,34 @@
 
+
+
+
+
+
+
+// PAGE DELETE 
+
+// je recupère le bien cliqué
+const cardDelete = document.querySelector('.is-clicked');
+// je recupere la modal de suppression
+const deleteModale = document.querySelector('.delete-case');
+
+cardDelete.addEventListener('click', (e)=>{
+    e.preventDefault();
+    deleteModale.classList.remove('hidden');
+})
+
+// je recupere le bouton close pour fermer la modale
+
+const closeModale = document.querySelector('.close');
+
+closeModale.addEventListener('click', ()=>{
+    deleteModale.classList.add('hidden');
+})
+
+
+
+
+
 // PAGINATION PHOTOS
 const listeImage = document.querySelectorAll('.gallery-item');
 const btnNext = document.querySelector('.next');

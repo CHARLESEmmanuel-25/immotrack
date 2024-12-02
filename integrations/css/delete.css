@@ -532,6 +532,7 @@ main{
     margin-bottom: 10%;
     display: flex;
     justify-content: end;
+    cursor: pointer;
 }
 
 .filtre{
