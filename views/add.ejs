@@ -1,0 +1,69 @@
+<%- include('Partials/sidebar.ejs') %>
+
+ 
+        <div class="contenair-ajout">
+            <form action="/submit-property" method="POST" enctype="multipart/form-data" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <!-- Partie gauche -->
+                <fieldset style="flex: 1; min-width: 300px;">
+                    <legend>Informations générales</legend>
+                    
+                    <label for="nom">Nom de la propriété :</label>
+                    <input type="text" id="nom" name="nom" required>
+            
+                    <label for="prix">Prix de la propriété :</label>
+                    <input type="number" id="prix" name="Prix_Propriete" step="0.01" required>
+            
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+            
+                    <label for="dimension">Dimension (en m²) :</label>
+                    <input type="number" id="dimension" name="dimension" step="0.01" required>
+                    <div class="radiobtn">
+                        <div class="filtreform">
+                            <label><i class="fas fa-couch"></i> Meublé<input type="checkbox" name="options[]" value="meuble"  required></label>
+                            
+                        </div>
+                        <div class="filtreform">
+                            <label><i class="fas fa-hot-tub"></i> Piscine<input type="checkbox" name="options[]" value="piscine" required></label>
+                            
+                        </div>
+                        <div class="filtreform">
+                            <label><i class="fas fa-tree"></i> Jardin<input type="checkbox" name="options[]" value="jardin" required></label>
+                            
+                        </div>
+                       
+                    </div>
+                </fieldset>
+            
+                <!-- Partie droite -->
+                <fieldset style="flex: 1; min-width: 300px;">
+                    <legend>Détails de la propriété</legend>
+                    
+                    <label for="date-ajout">Date d'ajout :</label>
+                    <input type="date" id="date-ajout" name="Date_Ajout" required>
+            
+                    <label for="description">Description de la propriété :</label>
+                    <textarea id="description" name="Description_Propriete" rows="4" required></textarea>
+            
+                    <label for="nombre-piece">Nombre de pièces :</label>
+                    <input type="number" id="nombre-piece" name="Nombre_Piece" required>
+            
+                    <label for="images">Ajouter des images :</label>
+                    <input type="file" id="images" name="images[]" accept="image/*" multiple>
+                </fieldset>
+            
+                <!-- Bouton en bas -->
+                <button id="btnajout" type="submit">Ajouter la Propriété</button>
+
+            </form>
+            
+            
+              
+        </div>
+
+    </main>
+   
+
+
+</body>
+</html>

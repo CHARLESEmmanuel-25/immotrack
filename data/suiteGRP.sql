@@ -254,22 +254,25 @@ CREATE TABLE TRANSAC(
    FOREIGN KEY(ID_Agent) REFERENCES AGENT(ID_Agent)
 );
 
-CREATE TABLE PROPRIETE(
-   ID_Propriete INT,
-   Prix_Propriete CURRENCY,
-   dimension INT,
+CREATE TABLE PROPRIETE (
+   ID_Propriete INT PRIMARY KEY,
+   Nom VARCHAR(50),
+   Prix_Propriete DECIMAL(15, 2),
+   Dimension DECIMAL(10, 2),
    Date_Ajout DATE,
-   Description_Propriete VARCHAR(50),
+   Description_Propriete VARCHAR(255),
+   Piscine BOOLEAN,         
+   Meuble BOOLEAN,         
+   Jardin BOOLEAN,          
    Nombre_Piece INT,
    ID_Statut INT NOT NULL,
    ID_Localisation INT NOT NULL,
    ID_TRANSAC INT NOT NULL,
-   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
-   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-   PRIMARY KEY(ID_Propriete),
-   FOREIGN KEY(ID_Statut) REFERENCES Statut(ID_Statut),
-   FOREIGN KEY(ID_Localisation) REFERENCES Localisation(ID_Localisation),
-   FOREIGN KEY(ID_TRANSAC) REFERENCES TRANSAC(ID_TRANSAC)
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   FOREIGN KEY (ID_Statut) REFERENCES Statut(ID_Statut),
+   FOREIGN KEY (ID_Localisation) REFERENCES Localisation(ID_Localisation),
+   FOREIGN KEY (ID_TRANSAC) REFERENCES TRANSAC(ID_TRANSAC)
 );
 
 CREATE TABLE Media(
