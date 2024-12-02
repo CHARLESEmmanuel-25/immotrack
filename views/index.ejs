@@ -22,46 +22,14 @@
            </div>
            <div class="grid-home">
            
+           <% properties.forEach(propriete => { %>
             <div class="card-home">
-                    <small class="tag is-size-7 is-warning status"><p>FOR RENT</p></small>
-                    <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                    <img src="/assets/exemple.jpg" alt="" srcset="">
-                    <div class="infocard-home">
-                        <p class="is-size-7">Pualling Benar House</p>
-                        <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                        <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                        <div class="tag-localisation">
-                            
-                            <span class="icon-text">
-                                <span class="icon is-size-7 ">
-                                    <i class="fas fa-bed attribut"></i>
-                                </span>
-                                <p class=" attribut-icon">7 chambres</p>
-                            </span>
-                            <span class="icon-text">
-                                <span class="icon is-size-7">
-                                    <i class="fas fa-bath attribut"></i>
-                                </span>
-                                <p class=" attribut-icon">3 bathe</p>
-                            </span>
-                            <span class="icon-text">
-                                <span class="icon is-size-7">
-                                    <i class="fas fa-ruler attribut"></i>
-                                </span>
-                                <p class="attribut-icon">150 m²</p>
-                            </span>
-
-                        </div>
-                        
-                    </div>
-            </div>
-            <div class="card-home">
-                <small class="tag is-size-7 is-warning status">FOR RENT</small>
+                <small class="tag is-size-7 is-warning status"><p>FOR RENT</p></small>
                 <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
                 <img src="/assets/exemple.jpg" alt="" srcset="">
                 <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
+                    <p class="is-size-7"><%= propriete.Nom %></p>
+                    <p class="prix-prop is-size-7"><strong>$<%= propriete.Prix_Propriete %></strong></p>
                     <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
                     <div class="tag-localisation">
                         
@@ -87,173 +55,12 @@
                     </div>
                     
                 </div>
-            </div>
-            <div class="card-home">
-                <small class="tag is-size-7 is-warning status">FOR RENT</small>
-                <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                <img src="/assets/exemple.jpg" alt="" srcset="">
-                <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                    <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                    <div class="tag-localisation">
-                        
-                        <span class="icon-text">
-                            <span class="icon is-size-7 ">
-                                <i class="fas fa-bed attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">7 chambres</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-bath attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">3 bathe</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-ruler attribut"></i>
-                            </span>
-                            <p class="attribut-icon">150 m²</p>
-                        </span>
+        </div>
+           <% }) %>
 
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card-home">
-                <small class="tag is-size-7 is-warning status">FOR RENT</small>
-                <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                <img src="/assets/exemple.jpg" alt="" srcset="">
-                <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                    <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                    <div class="tag-localisation">
-                        
-                        <span class="icon-text">
-                            <span class="icon is-size-7 ">
-                                <i class="fas fa-bed attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">7 chambres</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-bath attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">3 bathe</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-ruler attribut"></i>
-                            </span>
-                            <p class="attribut-icon">150 m²</p>
-                        </span>
+       
 
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card-home">
-                <small class="tag is-size-7 is-warning status">FOR RENT</small>
-                <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                <img src="/assets/exemple.jpg" alt="" srcset="">
-                <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                    <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                    <div class="tag-localisation">
-                        
-                        <span class="icon-text">
-                            <span class="icon is-size-7 ">
-                                <i class="fas fa-bed attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">7 chambres</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-bath attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">3 bathe</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-ruler attribut"></i>
-                            </span>
-                            <p class="attribut-icon">150 m²</p>
-                        </span>
 
-                    </div>
-                    
-                </div>
-             </div>
-             <div class="card-home">
-                <small class="tag is-size-7 is-warning status">FOR RENT</small>
-                <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                <img src="/assets/exemple.jpg" alt="" srcset="">
-                <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                    <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                    <div class="tag-localisation">
-                        
-                        <span class="icon-text">
-                            <span class="icon is-size-7 ">
-                                <i class="fas fa-bed attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">7 chambres</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-bath attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">3 bathe</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-ruler attribut"></i>
-                            </span>
-                            <p class="attribut-icon">150 m²</p>
-                        </span>
-
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card-home">
-                <small class="tag is-size-7 is-warning status status-home">FOR RENT</small>
-                <small class="favori has-text-danger"><i class="fas fa-heart "></i></small>
-                <img src="/assets/exemple.jpg" alt="" srcset="">
-                <div class="infocard-home">
-                    <p class="is-size-7">Pualling Benar House</p>
-                    <p class="prix-prop is-size-7"><strong>$1,500,000</strong></p>
-                    <p class="is-size-7 localisation"><i class="fas fa-map-marker-alt icon-location"></i>2 rue de la villa, Marseille</p>
-                    <div class="tag-localisation">
-                        
-                        <span class="icon-text">
-                            <span class="icon is-size-7 ">
-                                <i class="fas fa-bed attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">7 chambres</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-bath attribut"></i>
-                            </span>
-                            <p class=" attribut-icon">3 bathe</p>
-                        </span>
-                        <span class="icon-text">
-                            <span class="icon is-size-7">
-                                <i class="fas fa-ruler attribut"></i>
-                            </span>
-                            <p class="attribut-icon">150 m²</p>
-                        </span>
-
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
         
           
