@@ -82,7 +82,8 @@ btnPrev.addEventListener('click', () => {
     afficherImage(currentIndex);
 });
 
-// Initialisation te
+// Initialisation
 createDots();
 afficherImage(currentIndex);
+
 
