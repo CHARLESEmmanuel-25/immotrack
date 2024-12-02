@@ -850,7 +850,6 @@ main{
     width: 90%;
     height: 94vh;
     margin-left: 10%;
-    margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -860,38 +859,63 @@ main{
     
 }
 
-form {
-    max-width: 700px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 4%;
-    background-color: #dadee5;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
-  }
-  label {
+form {
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permet aux champs de s'adapter sur petits écrans */
+    
+   
+   
+}
+
+form fieldset {
+    flex: 1;
+    min-width: 300px; /* Taille minimale pour chaque colonne */
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #faf8f6;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+form legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6700;
+    margin-bottom: 10px;
+}
+
+form label {
     display: block;
     margin-top: 10px;
-  }
-  input, textarea, button {
+    color: #333131;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    margin-top: 5px;
+    border-radius: 5px;
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  button {
-    background-color: #FF6700;;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 5%;
-  }
-  button:hover {
-    background-color: #fa7013;;
-  }
+}
 
-  .btn{
-    margin-top: 2%;
-  }
+form input{
+   border: 1px solid gray;
+
+}
+
+form button{
+    border: none;
+    background-color:#FF6700 ;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+form button:hover {
+    background-color: #dddbd9;
+    color: #15294A;
+}

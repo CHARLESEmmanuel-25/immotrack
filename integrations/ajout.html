@@ -76,33 +76,47 @@
         </div>
  
         <div class="contenair-ajout">
-            <form action="/submit-property" method="POST" enctype="multipart/form-data">
-                <label for="nom">Nom de la propriété :</label>
-                <input type="text" id="nom" name="nom" required>
-                
-                <label for="prix">Prix de la propriété :</label>
-                <input type="number" id="prix" name="Prix_Propriete" step="0.01" required>
-                
-                <label for="adresse">Adresse :</label>
-                <input type="text" id="adresse" name="adresse" required placeholder="">
-                
-                <label for="dimension">Dimension (en m²) :</label>
-                <input type="number" id="dimension" name="dimension" step="0.01" required>
-                
-                <label for="date-ajout">Date d'ajout :</label>
-                <input type="date" id="date-ajout" name="Date_Ajout" required>
-                
-                <label for="description">Description de la propriété :</label>
-                <textarea id="description" name="Description_Propriete" rows="4" required></textarea>
-                
-                <label for="nombre-piece">Nombre de pièces :</label>
-                <input type="number" id="nombre-piece" name="Nombre_Piece" required>
-                
-                <label for="images">Ajouter des images :</label>
-                <input type="file" id="images" name="images[]" accept="image/*" multiple>
-                
-                <button class="btn" type="submit">Ajouter la Propriété</button>
-              </form>
+            <form action="/submit-property" method="POST" enctype="multipart/form-data" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <!-- Partie gauche -->
+                <fieldset style="flex: 1; min-width: 300px;">
+                    <legend>Informations générales</legend>
+                    
+                    <label for="nom">Nom de la propriété :</label>
+                    <input type="text" id="nom" name="nom" required>
+            
+                    <label for="prix">Prix de la propriété :</label>
+                    <input type="number" id="prix" name="Prix_Propriete" step="0.01" required>
+            
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+            
+                    <label for="dimension">Dimension (en m²) :</label>
+                    <input type="number" id="dimension" name="dimension" step="0.01" required>
+                </fieldset>
+            
+                <!-- Partie droite -->
+                <fieldset style="flex: 1; min-width: 300px;">
+                    <legend>Détails de la propriété</legend>
+                    
+                    <label for="date-ajout">Date d'ajout :</label>
+                    <input type="date" id="date-ajout" name="Date_Ajout" required>
+            
+                    <label for="description">Description de la propriété :</label>
+                    <textarea id="description" name="Description_Propriete" rows="4" required></textarea>
+            
+                    <label for="nombre-piece">Nombre de pièces :</label>
+                    <input type="number" id="nombre-piece" name="Nombre_Piece" required>
+            
+                    <label for="images">Ajouter des images :</label>
+                    <input type="file" id="images" name="images[]" accept="image/*" multiple>
+                </fieldset>
+            
+                <!-- Bouton en bas -->
+                <button id="btnajout" type="submit">Ajouter la Propriété</button>
+
+            </form>
+            
+            
               
         </div>
 
