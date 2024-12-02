@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 // PAGINATION PHOTOS
 const listeImage = document.querySelectorAll('.gallery-item');
 const btnNext = document.querySelector('.next');
