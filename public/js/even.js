@@ -1,6 +1,40 @@
 
 
 
+// SEARCH BAR 
+ // Cibler la barre 
+ const searchInput = document.querySelector('.search-input');
+
+        // Ajouter l'écouteur d'événement 'input'
+searchInput.addEventListener('input', async (e) => {
+    const url = "http://localhost:3000/search";
+    let recherche = e.target.value;
+
+    console.log(recherche);
+
+    try {
+        const res = await fetch(url, {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify({ query: recherche }) 
+        });
+
+        if (!res.ok) {
+            throw new Error(`Erreur lors de la requête : ${res.status}`);
+        }
+
+        const json = await res.json(res); 
+        console.log('Réponse JSON:', json); 
+    } catch (error) {
+        console.error('Erreur:', error.message); 
+    }
+});
+
+
+
+
 
 
 

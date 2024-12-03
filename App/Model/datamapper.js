@@ -10,6 +10,23 @@ const mainDatamapper = {
         return res;  // Retourne les résultats
     },
 
+    searchEngine: async (query) => {
+        let conn;
+        try {
+            conn = await client.getConnection();
+            const sql = `SELECT * FROM propriete WHERE Nom LIKE ?`;
+            const params = [`${query}%`];
+            const [rows] = await conn.query(sql, params);
+            return rows;
+        } catch (error) {
+            console.error("Error in searchEngine:", error);
+            throw error; 
+        } finally {
+            if (conn) conn.release();
+        }
+    }
+    
+
 };
 
 export default mainDatamapper;
