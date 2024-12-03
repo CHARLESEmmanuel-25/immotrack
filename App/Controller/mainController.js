@@ -23,6 +23,11 @@ const mainController = {
     ajout : async(req, res)=>{
         
         const {Nom, Prix_Propriete, Dimension,Date_Ajout, Adresse, Description_Propriete,Piscine,Meuble,Jardin,Nombre_Piece } = req.body;
+
+        // recuperer l'id de la localisation : 
+
+        const idLoc = '1'; 
+
         const newPropriete = {
             Nom,
             Prix_Propriete,
@@ -32,9 +37,14 @@ const mainController = {
             Description_Propriete,
             Piscine,
             Meuble,
+            localisation : idLoc,
             Jardin,
             Nombre_Piece
         }
+
+        const saveprop = await mainDatamapper.createProp(newPropriete);
+
+
 
         console.log(newPropriete);
         res.send('ok');

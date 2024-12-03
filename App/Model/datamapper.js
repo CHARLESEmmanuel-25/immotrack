@@ -9,6 +9,7 @@ const mainDatamapper = {
         const res = await conn.query("SELECT * FROM propriete");
         return res;  // Retourne les résultats
     },
+    
 
 };
 
