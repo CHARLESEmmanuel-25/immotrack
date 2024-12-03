@@ -5,11 +5,21 @@
  // Cibler la barre 
  const searchInput = document.querySelector('.search-input');
 
+ const contenairCardHome =document.querySelectorAll('.card-home');
+
         // Ajouter l'écouteur d'événement 'input'
 searchInput.addEventListener('input', async (e) => {
     const url = "http://localhost:3000/search";
     let recherche = e.target.value;
-
+    if (recherche.length > 0) {
+        contenairCardHome.forEach(card =>{
+            card.classList.add('hidden');
+        })
+    }else{
+        contenairCardHome.forEach(card =>{
+            card.classList.remove('hidden');
+        })
+    }
     console.log(recherche);
 
     try {
