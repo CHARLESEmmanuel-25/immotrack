@@ -5,7 +5,6 @@ const mainController = {
     home: async (req, res) => {
         try {
             const properties = await mainDatamapper.allProperties();
-            console.log(properties);
             res.render('index', {properties} );
         } catch (error) {
             console.error("Erreur lors de la récupération des propriétés :", error.message);
@@ -19,6 +18,26 @@ const mainController = {
 
     editProp : async(req,res)=>{
         res.render('edit');
+    },
+
+    ajout : async(req, res)=>{
+        
+        const {Nom, Prix_Propriete, Dimension,Date_Ajout, Adresse, Description_Propriete,Piscine,Meuble,Jardin,Nombre_Piece } = req.body;
+        const newPropriete = {
+            Nom,
+            Prix_Propriete,
+            Adresse : localisation,
+            Dimension,
+            Date_Ajout,
+            Description_Propriete,
+            Piscine,
+            Meuble,
+            Jardin,
+            Nombre_Piece
+        }
+
+        console.log(newPropriete);
+        res.send('ok');
     }
 
  };

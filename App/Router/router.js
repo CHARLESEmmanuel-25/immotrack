@@ -7,6 +7,6 @@ router.get('/', mainController.home);
 router.get('/edit', mainController.editProp);
 router.get('/add', mainController.addProp);
 
-
+router.post('/ajout', mainController.ajout);
 
 export default router;
