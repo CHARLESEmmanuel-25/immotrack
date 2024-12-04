@@ -14,8 +14,16 @@ const mainDatamapper = {
         let conn;
         try {
             conn = await client.getConnection();
-            const sql = `SELECT * FROM propriete WHERE Nom LIKE ?`;
-            const params = [`${query}%`];
+            
+            
+            const sql = `
+            SELECT * 
+            FROM propriete 
+            WHERE Nom LIKE ? 
+            LIMIT 10`;  
+
+            const params = [`%${query}%`]; 
+    
             const [rows] = await conn.query(sql, params);
             return rows;
         } catch (error) {
@@ -25,6 +33,7 @@ const mainDatamapper = {
             if (conn) conn.release();
         }
     }
+    
     
 
 };

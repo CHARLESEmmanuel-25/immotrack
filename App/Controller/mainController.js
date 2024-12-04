@@ -20,14 +20,36 @@ const mainController = {
     editProp : async(req,res)=>{
         res.render('edit');
     },
+    searchInput: async (req, res) => {
+        try {
+            // Récupérer le paramètre "query" depuis req.query ou req.params
+            const { query } = req.params; // Si les données arrivent comme paramètres de requête
+            // const { query } = req.params; // Utiliser ceci si les données arrivent comme segments de l'URL
+            
+            if (!query || query.trim() === "") {
+                return res.status(400).json({ error: "Le paramètre 'query' est requis." });
+            }
+    
+            console.log("Requête de recherche :", query);
+    
+            // Appeler la fonction de recherche dans la base de données
+            const searchOnDB = await mainDatamapper.searchEngine(query);
+    
+            if (!searchOnDB || searchOnDB.length === 0) {
+                return res.status(404).json({ message: "Aucun résultat trouvé." });
+            }
 
-    searchInput: async(req,res)=>{
-        const {query} = req.body;
-        console.log(query);
-        const searchOnDB = await mainDatamapper.searchEngine(query);
-        console.log(query);
-        res.status(200).json(searchOnDB);
+            
+            
+            // Retourner les résultats au format JSON
+            res.status(200).json({ searchOnDB });
+        } catch (error) {
+            console.error("Erreur lors de la recherche :", error.message);
+            res.status(500).json({ error: "Une erreur est survenue. Veuillez réessayer." });
+        }
     }
+    
+    
 
  };
  
