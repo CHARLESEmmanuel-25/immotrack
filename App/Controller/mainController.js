@@ -20,35 +20,33 @@ const mainController = {
         res.render('edit');
     },
 
-    ajout : async(req, res)=>{
-        
-        const {Nom, Prix_Propriete, Dimension,Date_Ajout, Adresse, Description_Propriete,Piscine,Meuble,Jardin,Nombre_Piece } = req.body;
-
-        // recuperer l'id de la localisation : 
-
-        const idLoc = '1'; 
-
-        const newPropriete = {
-            Nom,
-            Prix_Propriete,
-            Adresse : localisation,
-            Dimension,
-            Date_Ajout,
-            Description_Propriete,
-            Piscine,
-            Meuble,
-            localisation : idLoc,
-            Jardin,
-            Nombre_Piece
+    ajout: async (req, res) => {
+        try {
+            const {ID_Propriete, Nom, Prix_Propriete, Dimension, Date_Ajout, Adresse, Description_Propriete,poster, Piscine, Meuble, Jardin, Nombre_Piece, ID_Statut, CodePostal, Region, Ville} = req.body;
+    
+            // Crée un objet pour la localisation
+            const newLocalisation = {Ville, Adresse, CodePostal, Region };
+            console.log(newLocalisation);
+    
+            // Crée un objet pour la propriété
+            const newPropriete = {ID_Propriete, Nom, Prix_Propriete, Dimension, Date_Ajout, Description_Propriete, poster,Piscine, Meuble, Jardin, Nombre_Piece, ID_Statut };
+    
+           
+    
+            // Sauvegarde la propriété avec l'ID de localisation
+            const saveprop = await mainDatamapper.createProp(newPropriete);
+    
+            console.log(saveloc);
+            console.log(saveprop);
+    
+            res.status(201).send('Propriété ajoutée avec succès');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Erreur lors de l\'ajout de la propriété');
         }
-
-        const saveprop = await mainDatamapper.createProp(newPropriete);
-
-
-
-        console.log(newPropriete);
-        res.send('ok');
     }
+    
+    
 
  };
  
